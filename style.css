@@ -236,7 +236,7 @@ body > #main {
 .main .assignment .item > img
 {
     height: auto;
-    width: clamp(12rem, 22.666667vw, 17rem);
+    width: clamp(12rem, 22.666667vw, 19rem);
     border-radius: 0.5rem 0 0 0.5rem;
 }
 
