@@ -4,7 +4,7 @@
     let projectBtn = d.querySelector(".project-btn");
 
     projectBtn.addEventListener("click", () => {
-        window.location.href = '../projects.html';
+        window.location.href = '../traineeship-projects/projects.html';
     })
 
 }) (document);

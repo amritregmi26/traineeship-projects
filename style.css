@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Roboto&family=Poppins:wght@400;500;700&display=swap');
+
 
 :root {
     --dark: #1E1E1E;
     --light: #F2ECFF;
     --blue: #068488;
+    --tag: #b3541d;
+    --project-bg: #252525;
     --btn-hover: #047275;
 }
 
@@ -19,6 +22,10 @@ body {
     background: var(--dark);
     color: var(--light);
 }
+
+/*******************/
+/**** Home Page ****/
+/*******************/
 
 body>#main {
     display: flex;
@@ -107,3 +114,130 @@ body>#main {
         font-size: 1.1rem;
     }
 }
+
+/***********************/
+/**** Projects Page ****/
+/***********************/
+
+.main#main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4.5rem 0 1.5rem 0;
+    gap: clamp(3rem, 6.666vw, 5rem);
+    max-inline-size: 75rem;
+}
+
+.main#main .assignment
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    inline-size: 100%;
+    gap: clamp(1.9rem, 3vw, 3rem);
+}
+
+.main#main .assignment .header-text
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    font-size: clamp(1.15rem, 3.222vw, 3rem);
+}
+
+.main#main .assignment .item-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    inline-size: 90%;
+    position: relative;
+    gap: clamp(1rem, 2.5333vw, 2.5rem);
+}
+
+.main#main .assignment .item
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: clamp(1rem, 3.8555vw, 3.6rem);
+    inline-size: 100%;
+    background-color: var(--project-bg);
+    border-radius: 0.5rem;
+}
+
+.main#main .assignment .main-content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: flex-start;
+    padding-right: 1rem;
+}
+
+.main#main .assignment .project-name
+{
+    font-size: clamp(1rem, 2.66667vw, 2.45rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.main#main .assignment .project-description
+{
+    font-size: clamp(0.8rem, 1.55556vw, 1.5rem);
+    line-height: clamp(1rem, 1.88888vw, 1.75rem);
+    font-family: 'Roboto', sans-serif;
+}
+
+.main#main .assignment .project-info
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    inline-size: 100%;
+}
+
+.main#main .assignment  .project-info-btns,
+.main#main .assignment .project-info-tags
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: clamp(0.8rem, 1.222222vw, 1.25rem);
+    line-height: clamp(0.5rem, 1.333333vw, 1.25rem);
+}
+
+.main#main .assignment  .project-info-btns a, 
+.main#main .assignment .project-info-tags .tag
+{
+    color: var(--light);
+    background: var(--blue);
+    padding: 0.3rem 0.8rem;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 0.2rem;
+}
+
+.main#main .assignment .project-info-tags .tag
+{
+    background: var(--tag);
+}
+
+.main#main .assignment .item > img
+{
+    height: auto;
+    width: clamp(12rem, 22.666667vw, 17rem);
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+/* @media screen and (max-width: 675px)
+{
+
+} */
