@@ -162,7 +162,7 @@ body > #main {
     gap: clamp(1rem, 2.5333vw, 2.5rem);
 }
 
-.main .assignment .item
+.main .project-list .item
 {
     display: flex;
     flex-direction: row;
@@ -174,7 +174,7 @@ body > #main {
     border-radius: 0.5rem;
 }
 
-.main .assignment .main-content
+.main .project-list .main-content
 {
     display: flex;
     flex-direction: column;
@@ -184,21 +184,21 @@ body > #main {
     padding-right: 1rem;
 }
 
-.main .assignment .project-name
+.main .project-list .project-name
 {
     font-size: clamp(1rem, 2.66667vw, 2.45rem);
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 
-.main .assignment .project-description
+.main .project-list .project-description
 {
     font-size: clamp(0.8rem, 1.55556vw, 1.5rem);
     line-height: clamp(1rem, 1.88888vw, 1.75rem);
     font-family: 'Roboto', sans-serif;
 }
 
-.main .assignment .project-info
+.main .project-list .project-info
 {
     display: flex;
     flex-direction: row;
@@ -207,8 +207,8 @@ body > #main {
     inline-size: 100%;
 }
 
-.main .assignment  .project-info-btns,
-.main .assignment .project-info-tags
+.main .project-list  .project-info-btns,
+.main .project-list .project-info-tags
 {
     display: flex;
     align-items: center;
@@ -217,8 +217,8 @@ body > #main {
     line-height: clamp(0.5rem, 1.333333vw, 1.25rem);
 }
 
-.main .assignment  .project-info-btns a, 
-.main .assignment .project-info-tags .tag
+.main .project-list  .project-info-btns a, 
+.main .project-list .project-info-tags .tag
 {
     color: var(--light);
     background: var(--blue);
@@ -228,12 +228,12 @@ body > #main {
     border-radius: 0.2rem;
 }
 
-.main .assignment .project-info-tags .tag
+.main .project-list .project-info-tags .tag
 {
     background: var(--tag);
 }
 
-.main .assignment .item > img
+.main .project-list .item > img
 {
     height: auto;
     width: clamp(12rem, 22.666667vw, 19rem);
@@ -242,21 +242,21 @@ body > #main {
 
 @media screen and (max-width: 675px)
 {
-    .main .assignment .item-container
+    .main .project-list .item-container
     {
         justify-content: center;
         align-items: center;
         inline-size: 80%;
     }
 
-    .main .assignment .item
+    .main .project-list .item
     {
         flex-direction: column;
         inline-size: 80%;
         padding: 1.05rem;
     }
     
-    .main .assignment .main-content
+    .main .project-list .main-content
     {
         display: flex;
         flex-direction: column;
@@ -265,14 +265,14 @@ body > #main {
         align-items: flex-start;
     }
 
-    .main .assignment  .project-info-btns,
-    .main .assignment .project-info-tags
+    .main .project-list  .project-info-btns,
+    .main .project-list .project-info-tags
     {
         gap: 0.25rem;
         
     }
     
-    .main#main .assignment .item > img
+    .main#main .project-list .item > img
     {
         height: auto;
         width: 100%;
@@ -282,12 +282,12 @@ body > #main {
 
 @media screen and (max-width: 565px)
 {
-    .main .assignment .item-container
+    .main .project-list .item-container
     {
         inline-size: 90%;
     }
 
-    .main .assignment .item
+    .main .project-list .item
     {
        inline-size: 100%;
     }
@@ -295,7 +295,7 @@ body > #main {
 
 @media screen and (max-width: 400px)
 {
-    .main .assignment .project-info
+    .main .project-list .project-info
     {
         display: flex;
         flex-direction: column;
@@ -304,10 +304,52 @@ body > #main {
         inline-size: 100%;
     }
 
-    .main .assignment  .project-info-btns,
-    .main .assignment .project-info-tags
+    .main .project-list  .project-info-btns,
+    .main .project-list .project-info-tags
     {
         gap: 0.7rem;
         
+    }
+}
+
+/***********************/
+/****** ERD Page *******/
+/***********************/
+
+#erd .item 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: clamp(1rem, 2.8555vw, 2rem);
+    inline-size: 100%;
+    border-radius: 0.5rem;
+}
+
+#erd .item-header
+{
+    font-size: clamp(1rem, 2.66667vw, 2.25rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+#erd img 
+{
+    height: auto;
+    width: clamp(20rem, 60vw, 65rem);
+    border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 625px) 
+{
+    #erd .assignment 
+    {
+        inline-size: 95%;
+    }
+
+    #erd img 
+    {
+        inline-size: 100%;
     }
 }
