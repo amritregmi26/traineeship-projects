@@ -353,7 +353,7 @@ body > #main {
 #erd .item h1 
 {
     content: attr(data-content);
-    font-size: clamp(0.8rem, 1.6566vw, 2rem);
+    font-size: clamp(0.8rem, 1.6566vw, 1.5rem);
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     padding-inline-start: 0.5rem;
@@ -367,4 +367,18 @@ body > #main {
     width: 100%;
     border-radius:  0.5rem 0.5rem 0 0;
     z-index: 1;
+}
+
+@media screen and (max-width: 600px)
+{
+    #erd .item 
+    {
+        inline-size: 80%;
+    }
+
+    #erd .item h1 
+    {
+        font-size: 1rem;
+    }
+
 }
