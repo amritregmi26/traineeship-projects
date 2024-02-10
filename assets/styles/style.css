@@ -181,7 +181,7 @@ body > #main {
     justify-content: center;
     gap: 1rem;
     align-items: flex-start;
-    padding-right: 1rem;
+    padding-inline-end: 1rem;
 }
 
 .main .project-list .project-name
@@ -316,40 +316,55 @@ body > #main {
 /****** ERD Page *******/
 /***********************/
 
+#erd .item-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    inline-size: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    gap: clamp(1rem, 2.5333vw, 2.5rem);
+    margin-block-end: 1rem;
+}
+
 #erd .item 
 {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: clamp(1rem, 2.8555vw, 2rem);
-    inline-size: 100%;
-    border-radius: 0.5rem;
+    inline-size: 30%;
+    position: relative;
+    cursor: pointer;
 }
 
-#erd .item-header
+#erd .item::after 
 {
-    font-size: clamp(1rem, 2.66667vw, 2.25rem);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    content: "";
+    background-color: var(--project-bg);
+    inline-size: 100%;
+    block-size: 100%;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
+#erd .item h1 
+{
+    content: attr(data-content);
+    font-size: clamp(0.8rem, 1.6566vw, 2rem);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    padding-inline-start: 0.5rem;
+    padding-block: 1.25rem;
+    z-index: 1;
+    color: var(--light);
+}
 #erd img 
 {
     height: auto;
-    width: clamp(20rem, 60vw, 65rem);
-    border-radius: 0.5rem;
-}
-
-@media screen and (max-width: 625px) 
-{
-    #erd .assignment 
-    {
-        inline-size: 95%;
-    }
-
-    #erd img 
-    {
-        inline-size: 100%;
-    }
+    width: 100%;
+    border-radius:  0.5rem 0.5rem 0 0;
+    z-index: 1;
 }
