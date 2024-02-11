@@ -390,15 +390,16 @@ body > #main {
 #individual-er .content
 {
     display: flex;
-    inline-size: 100%;
+    inline-size: 95%;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    margin-block-end: 1rem;
 }
 
 #individual-er img 
 {
-    inline-size: 47%;
+    inline-size: 45%;
     border-radius: 0.5rem;
 }
 
@@ -406,9 +407,9 @@ body > #main {
 {
     display: flex;
     flex-direction: column;
-    gap: clamp(0.8rem, 2.555vw, 2rem);
+    gap: clamp(1rem, 2.555vw, 2rem);
     font-family: 'Roboto', sans-serif;
-    inline-size: 48%;
+    inline-size: 52%;
     position: relative;
 }
 
@@ -426,14 +427,14 @@ body > #main {
     justify-content: space-between;
 }
 
-#individual-er .main-content .entity-list 
+#individual-er .main-content .details-container
 {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
 }
 
-#individual-er .main-content .entities
+#individual-er .main-content .items
 {
     display: flex;
     flex-direction: column;
@@ -452,4 +453,53 @@ body > #main {
     font-size: clamp(0.6rem, 1.245vw, 1.2rem);
     background-color: var(--tag);
     border-radius: 0.3rem;
+}
+
+@media screen and (max-width: 767px) {
+
+    #individual-er .content {
+        flex-direction: column;
+    }    
+
+    #individual-er img 
+    {
+        inline-size: 90%;
+    }
+
+
+    #individual-er .main-content
+    {
+        gap: 1.2rem;
+        inline-size: 80%;
+        align-self: flex-start;
+        margin-inline-start: 2.15rem;
+    }
+
+    #individual-er .main-content .header {
+        font-size: clamp(0.8rem, 2vw, 1.75rem);
+    }
+
+    #individual-er .main-content .description
+    {
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    #individual-er .main-content .items
+    {
+        font-size: clamp(0.65rem, 1.55vw, 0.9rem);
+    }
+
+    #individual-er .main-content .query-link a
+    {
+        font-size: clamp(0.65rem, 1.55vw, 0.9rem);
+    }
+
+}
+
+@media screen and (max-width: 460px) {
+    #individual-er .main-content .details {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }
