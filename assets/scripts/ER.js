@@ -14,7 +14,7 @@ function updateIndividual() {
         erDiagram = document.querySelector("#individual-er img"),
         mainContent = document.querySelector("#individual-er .main-content")
         detailsSection = document.querySelector("#individual-er .details"),
-        entities = document.querySelector("#individual-er .entities");
+        detailItems = document.querySelectorAll("#individual-er .items");
 
     const urlParams = new URLSearchParams(window.location.search);
     const title = urlParams.get("title");
@@ -37,19 +37,28 @@ function updateIndividual() {
         for(let i = 0; i < data.length; i++) {
             if(data[i].title === title) {
                 desc.innerHTML = data[i].description;
-                createEntity(data[i].title, i);
+                createEntity(i);
+                createRelation(i);
                 break;
             }
         }
         mainContent.insertBefore(desc, detailsSection);
 
         // Create and append Entity
-        function createEntity(urlTitle, idx) {
+        function createEntity(idx) {
             for(let i = 0; i < data[idx].Entities.length; i++) {
                 let entity = document.createElement('li');
-                entity.classList.add('entity');
                 entity.innerHTML = data[idx].Entities[i];
-                entities.appendChild(entity);
+                detailItems[0].appendChild(entity);
+            }
+        }
+
+        // Create and append relation
+        function createRelation(idx) {
+            for(let i = 0; i < data[idx].relations.length; i++) {
+                let relation = document.createElement('li');
+                relation.innerHTML = data[idx].relations[i];
+                detailItems[1].appendChild(relation);
             }
         }
     }
