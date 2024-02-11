@@ -3,7 +3,7 @@ let erCard = document.querySelectorAll("#erd .item");
 for (let i = 0; i < erCard.length; i++) {
     erCard[i].addEventListener("click", () => {
         const title = erCard[i].children[1].innerHTML;
-        window.location.href = `../individual-er.html?title=${encodeURIComponent(title)}`;
+        window.location.href = `../traineeship-projects/individual-er.html?title=${encodeURIComponent(title)}`;
     });
 }
 
