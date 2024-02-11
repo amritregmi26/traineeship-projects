@@ -1,0 +1,39 @@
+[
+    {
+      "title": "Library MS",
+      "description": "An efficient system for managing library resources, tracking books, and facilitating easy access for users.",
+      "Entities": ["Book", "Member", "Author", "Publisher", "Genre", "Loan"],
+      "link": ""
+    },
+    {
+      "title": "Tournament MS",
+      "description": "Streamline the organization of sports tournaments, manage participants, and keep track of match results.",
+      "Entities": ["Tournament", "Team", "Match", "Player", "Referee", "Venue"],
+      "link": ""
+    },
+    {
+      "title": "Personal Expense Tracker",
+      "description": "A tool to manage and track personal expenses, helping users maintain a budget and financial overview.",
+      "Entities": ["Expense", "Category", "PaymentMethod", "Budget", "Income", "Savings"],
+      "link": ""
+    },
+    {
+      "title": "Blood Bank MS",
+      "description": "Facilitate efficient blood donation management, donor tracking, and blood supply inventory control.",
+      "Entities": ["Donor", "BloodBag", "BloodType", "MedicalHistory", "DonationCenter", "BloodTest"],
+      "link": ""
+    },
+    {
+      "title": "School MS",
+      "description": "A comprehensive system for managing student information, courses, grades, and administrative tasks.",
+      "Entities": ["Student", "Course", "Enrollment", "Teacher", "Classroom", "Exam"],
+      "link": ""
+    },
+    {
+      "title": "Employee MS",
+      "description": "Simplify HR tasks, manage employee data, track attendance, and streamline payroll processes.",
+      "Entities": ["Employee", "Department", "Attendance", "LeaveRequest", "Payroll", "JobTitle"],
+      "link": ""
+    }
+  ]
+  

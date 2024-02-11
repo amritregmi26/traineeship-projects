@@ -382,3 +382,74 @@ body > #main {
     }
 
 }
+
+/***********************/
+/*** Individual Page ***/
+/***********************/
+
+#individual-er .content
+{
+    display: flex;
+    inline-size: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#individual-er img 
+{
+    inline-size: 47%;
+    border-radius: 0.5rem;
+}
+
+#individual-er .main-content
+{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.8rem, 2.555vw, 2rem);
+    font-family: 'Roboto', sans-serif;
+    inline-size: 48%;
+    position: relative;
+}
+
+#individual-er .main-content .description
+{
+    font-weight: 600;
+    font-size: clamp(0.8rem, 1.8977vw, 1.8rem);
+}
+
+
+#individual-er .main-content .details
+{
+    display: flex;
+    inline-size: 100%;
+    justify-content: space-between;
+}
+
+#individual-er .main-content .entity-list 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+#individual-er .main-content .entities
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-inline-start: 1.85rem;
+    text-transform: capitalize;
+    font-size: clamp(0.6rem, 1.15vw, 1.2rem);
+}
+
+#individual-er .main-content .query-link a
+{
+    color: var(--light);
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 0.2rem 1.25rem;
+    font-size: clamp(0.6rem, 1.245vw, 1.2rem);
+    background-color: var(--tag);
+    border-radius: 0.3rem;
+}
