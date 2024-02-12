@@ -24,7 +24,7 @@ function updateIndividual() {
 
     // Fetch JSON data
     let data = async () => {
-        let res = await fetch('../assets/scripts/data.json');
+        let res = await fetch('/traineeship-projects/assets/scripts/data.json');
         let jsonData = await res.json();
         elements(jsonData);
     }
