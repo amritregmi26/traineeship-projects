@@ -31,7 +31,6 @@
         "Entities": [
           "User",
           "Category",
-          "PaymentMethod",
           "Expense",
           "Budget",
           "Tag"
@@ -39,7 +38,6 @@
         "relations": [
           "User - Expense: One to Many",
           "Category - Expense: One to Many",
-          "PaymentMethod - Expense: One to Many",
           "User - Budget: One to Many",
           "Category - Budget: One to Many",
           "Expense - Tag: Many to Many"
@@ -58,10 +56,10 @@
         ],
         "relations": [
           "Tournament - Team: One to Many",
-          "Team - Player: Many to Many (through Player_Team)",
+          "Team - Player: Many to Many",
           "Tournament - Match: One to Many",
-          "Team - Match: One to Many (as team1 and team2)",
-          "Player - Match: Many to Many (through Match_Player)",
+          "Team - Match: One to Many",
+          "Player - Match: Many to Many",
           "Team - Match_Player: One to Many"
         ],
         "link": ""
