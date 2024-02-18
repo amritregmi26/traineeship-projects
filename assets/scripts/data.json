@@ -1,122 +1,70 @@
 [
     {
         "title": "Library MS",
+        "img": "traineeship-projects/assets/img/erd/LMS.png",
         "description": "An efficient system for managing library resources, tracking books, and facilitating easy access for users.",
         "Entities": [
-            "Book",
-            "Member",
+            "Library",
+            "Books",
+            "Members",
             "Author",
             "Publisher",
-            "Genre",
-            "Loan"
+            "Employee",
+            "Admin"
         ],
         "relations": [
-            "Book - Author : Many to One",
-            "Book - Genre : Many to One",
-            "Book - Publisher : Many to One",
-            "Loan - Member : Many to One",
-            "Loan - Book : Many to One"
-        ],
-        "link": ""
-    },
-    {
-        "title": "Tournament MS",
-        "description": "Streamline the organization of sports tournaments, manage participants, and keep track of match results.",
-        "Entities": [
-            "Tournament",
-            "Team",
-            "Match",
-            "Player",
-            "Referee",
-            "Venue"
-        ],
-        "relations": [
-            "Tournament - Team : One to Many",
-            "Match - Team : Many to Many",
-            "Match - Player : Many to Many",
-            "Match - Referee : Many to One",
-            "Venue - Match : One to Many"
+            "Library - Members: One to Many",
+            "Library - Employee: One to Many",
+            "Library - Books: One to Many", 
+            "Books - Employee: Many to One",
+            "Employee - Members: Many to Many",
+            "Admin - Employee: One to Many",
+            "Author - Books: One to Many", 
+            "Publisher - Books: One to Many"
         ],
         "link": ""
     },
     {
         "title": "Personal Expense Tracker",
-        "description": "A tool to manage and track personal expenses, helping users maintain a budget and financial overview.",
+        "img": "traineeship-projects/assets/img/erd/ExpTrack.png",
+        "description": "An application for tracking personal expenses and managing budgets.",
         "Entities": [
-            "Expense",
-            "Category",
-            "PaymentMethod",
-            "Budget",
-            "Income",
-            "Savings"
+          "User",
+          "Category",
+          "PaymentMethod",
+          "Expense",
+          "Budget",
+          "Tag"
         ],
         "relations": [
-            "Expense - Category : Many to One",
-            "Expense - PaymentMethod : Many to One",
-            "Budget - Expense : One to Many",
-            "Income - Expense : One to Many",
-            "Savings - Expense : One to One"
+          "User - Expense: One to Many",
+          "Category - Expense: One to Many",
+          "PaymentMethod - Expense: One to Many",
+          "User - Budget: One to Many",
+          "Category - Budget: One to Many",
+          "Expense - Tag: Many to Many"
         ],
         "link": ""
-    },
-    {
-        "title": "Blood Bank MS",
-        "description": "Facilitate efficient blood donation management, donor tracking, and blood supply inventory control.",
+      },
+      {
+        "title": "Tournament MS",
+        "img": "traineeship-projects/assets/img/erd/TMS.png",
+        "description": "A system for managing sports tournaments, teams, and matches.",
         "Entities": [
-            "Donor",
-            "BloodBag",
-            "BloodType",
-            "MedicalHistory",
-            "DonationCenter",
-            "BloodTest"
+          "Tournament",
+          "Team",
+          "Player",
+          "Match"
         ],
         "relations": [
-            "Donor - BloodBag : One to Many",
-            "BloodBag - BloodType : Many to One",
-            "Donor - MedicalHistory : One to Many",
-            "DonationCenter - Donor : One to Many",
-            "BloodTest - BloodBag : One to One"
+          "Tournament - Team: One to Many",
+          "Team - Player: Many to Many (through Player_Team)",
+          "Tournament - Match: One to Many",
+          "Team - Match: One to Many (as team1 and team2)",
+          "Player - Match: Many to Many (through Match_Player)",
+          "Team - Match_Player: One to Many"
         ],
         "link": ""
-    },
-    {
-        "title": "School MS",
-        "description": "A comprehensive system for managing student information, courses, grades, and administrative tasks.",
-        "Entities": [
-            "Student",
-            "Course",
-            "Enrollment",
-            "Teacher",
-            "Classroom",
-            "Exam"
-        ],
-        "relations": [
-            "Student - Enrollment : One to Many",
-            "Course - Enrollment : One to Many",
-            "Teacher - Course : Many to Many",
-            "Exam - Course : Many to One",
-            "Student - Exam : Many to One"
-        ],
-        "link": ""
-    },
-    {
-        "title": "Employee MS",
-        "description": "Simplify HR tasks, manage employee data, track attendance, and streamline payroll processes.",
-        "Entities": [
-            "Employee",
-            "Department",
-            "Attendance",
-            "LeaveRequest",
-            "Payroll",
-            "JobTitle"
-        ],
-        "relations": [
-            "Employee - Department : Many to One",
-            "Attendance - Employee : Many to One",
-            "LeaveRequest - Employee : Many to One",
-            "Payroll - Employee : One to One",
-            "Employee - JobTitle : Many to One"
-        ],
-        "link": ""
-    }
+      }
+      
 ]
