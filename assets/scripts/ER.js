@@ -5,7 +5,7 @@ function handleErd() {
 
     // Fetch JSON data
     let data = async () => {
-        let res = await fetch('traineeship-projects/assets/scripts/data.json');
+        let res = await fetch('/traineeship-projects/assets/scripts/data.json');
         let jsonData = await res.json();
         updateUI(jsonData);
     }
@@ -35,7 +35,7 @@ function handleErd() {
         for (let i = 0; i < erCard.length; i++) {
             erCard[i].addEventListener("click", () => {
                 const title = erCard[i].children[1].innerHTML;
-                window.location.href = `traineeship-projects/individual-er.html?title=${encodeURIComponent(title)}`;
+                window.location.href = `/traineeship-projects/individual-er.html?title=${encodeURIComponent(title)}`;
             });
         }
     }
@@ -66,7 +66,7 @@ function updateIndividual() {
 
     // Fetch JSON data
     let data = async () => {
-        let res = await fetch('traineeship-projects/assets/scripts/data.json');
+        let res = await fetch('/traineeship-projects/assets/scripts/data.json');
         let jsonData = await res.json();
         elements(jsonData);
     }
