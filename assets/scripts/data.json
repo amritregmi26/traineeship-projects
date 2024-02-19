@@ -1,7 +1,7 @@
 [
     {
         "title": "Library MS",
-        "img": "traineeship-projects/assets/img/erd/LMS.png",
+        "img": "./assets/img/erd/LMS.png",
         "description": "An efficient system for managing library resources, tracking books, and facilitating easy access for users.",
         "Entities": [
             "Library",
@@ -26,7 +26,7 @@
     },
     {
         "title": "Personal Expense Tracker",
-        "img": "traineeship-projects/assets/img/erd/ExpTrack.png",
+        "img": "./assets/img/erd/ExpTrack.png",
         "description": "An application for tracking personal expenses and managing budgets.",
         "Entities": [
           "User",
@@ -46,7 +46,7 @@
       },
       {
         "title": "Tournament MS",
-        "img": "traineeship-projects/assets/img/erd/TMS.png",
+        "img": "./assets/img/erd/TMS.png",
         "description": "A system for managing sports tournaments, teams, and matches.",
         "Entities": [
           "Tournament",
